@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ flatpage.title }}</title>
+</head>
+<body>
+
+     {% include 'flatpages/default.html' %}
+
+<!-- Page content-->
+        <div class="container">
+            <div class="row">
+
+
+
+
+               <style>
+.verse {
+  display: table;
+  margin: 0 auto; /* для центрирования display: table; не нужно указывать ширину блока, она рассчитывается самостоятельно */
+  white-space: pre-line; /* не нужен <br> */
+  word-wrap: break-word; /* чтобы слова переносились на маленьком экране */
+}
+</style>
+                <div class="verse">
+                    {% block content %}
+                    {{ flatpage.content }}<br><br><hr>
+                    {{ flatpage.content }}
+                    {% endblock content %}
+                </div>
+           </div>
+        </div>
+</body>
+</html>
+
+
+<!--<div class="verse">У лукоморья дуб зелёный;-->
+<!--Златая цепь на дубе том:-->
+<!--И днём и ночью кот учёный-->
+<!--Всё ходит по цепи кругом;-->
+<!--Идёт направо - песнь заводит,-->
+<!--Налево - сказку говорит.-->
+<!--</div>-->
